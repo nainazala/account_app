@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             icon: Icon(Icons.add),
           )
         ]),
-        body: ListView.builder(
+        body: controller.trascationList.length==0?Center(child: Text("No Trascation added yet!"),): ListView.builder(
           padding: EdgeInsets.all(10),
           itemCount: controller.trascationList.length,
           itemBuilder: (context, index) {
